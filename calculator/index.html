@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="app.js"></script>
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <form>
+          <div class="display">
+            <input type="text" name="display" />
+          </div>
+          <div>
+            <input
+              type="button"
+              value="AC"
+              onclick="document.getElementsByName('display')[0].value = ''"
+            />
+            <input type="button" value="+/-" onclick="toggleSign()" />
+            <input type="button" value="%" onclick="calculatePercentage()" />
+            <input
+              type="button"
+              value="&divide;"
+              onclick="document.getElementsByName('display')[0].value += '/'"
+            />
+          </div>
+          <div>
+            <input
+              type="button"
+              value="7"
+              onclick="document.getElementsByName('display')[0].value += '7'"
+            />
+            <input
+              type="button"
+              value="8"
+              onclick="document.getElementsByName('display')[0].value += '8'"
+            />
+            <input
+              type="button"
+              value="9"
+              onclick="document.getElementsByName('display')[0].value += '9'"
+            />
+            <input
+              type="button"
+              value="&times;"
+              onclick="document.getElementsByName('display')[0].value += '*'"
+            />
+          </div>
+          <div>
+            <input
+              type="button"
+              value="4"
+              onclick="document.getElementsByName('display')[0].value += '4'"
+            />
+            <input
+              type="button"
+              value="5"
+              onclick="document.getElementsByName('display')[0].value += '5'"
+            />
+            <input
+              type="button"
+              value="6"
+              onclick="document.getElementsByName('display')[0].value += '6'"
+            />
+            <input
+              type="button"
+              value="&minus;"
+              onclick="document.getElementsByName('display')[0].value += '-'"
+            />
+          </div>
+          <div>
+            <input
+              type="button"
+              value="1"
+              onclick="document.getElementsByName('display')[0].value += '1'"
+            />
+            <input
+              type="button"
+              value="2"
+              onclick="document.getElementsByName('display')[0].value += '2'"
+            />
+            <input
+              type="button"
+              value="3"
+              onclick="document.getElementsByName('display')[0].value += '3'"
+            />
+            <input
+              type="button"
+              value="&plus;"
+              onclick="document.getElementsByName('display')[0].value += '+'"
+            />
+          </div>
+          <div>
+            <input
+              type="button"
+              value="0"
+              class="zero"
+              onclick="document.getElementsByName('display')[0].value += '0'"
+            />
+            <input
+              type="button"
+              value="."
+              onclick="document.getElementsByName('display')[0].value += '.'"
+            />
+            <input
+              type="button"
+              value="="
+              onclick="document.getElementsByName('display')[0].value = eval(document.getElementsByName('display')[0].value)"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
